@@ -1,0 +1,66 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOGO Offer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="bogo-heading">YAY! It’s BOGO</h2>
+      <!-- Offer form -->
+      <form id="offerForm">
+        <!-- Card container -->
+        <div id="card-container"></div>
+        <!-- Checkout Prize summary and add to cart button -->
+        <div class="price-summary">
+          <div class="row">
+            <span class="label">Free Delivery</span>
+            <span class="total"
+              >Total:
+              <span class="value" id="total-price"> $18.00 USD</span></span
+            >
+          </div>
+        </div>
+
+        <button type="submit" class="add-to-cart">+ Add to Cart</button>
+        <p class="powered">@ Powered by Pumper</p>
+      </form>
+    </div>
+    <!-- Reusable card template -->
+    <template id="card-template">
+      <label class="card">
+        <div class="most-popular">MOST POPULAR</div>
+        <div class="card-header">
+          <div class="card-radio">
+            <input type="radio" name="unit" />
+            <div class="details">
+              <p>
+                <span class="unit-label"></span> <span class="badge"></span>
+              </p>
+              <p class="standard-price"></p>
+            </div>
+          </div>
+          <div class="price">
+            <span class="price-final"></span>
+            <del class="price-original"></del>
+          </div>
+        </div>
+        <div class="options">
+          <div class="selection-grid">
+            <div class="labels">
+              <span>Size</span>
+              <span>Colour</span>
+            </div>
+          </div>
+          <div class="variant-container"></div>
+        </div>
+      </label>
+    </template>
+    <script src="js/script.js"></script>
+  </body>
+</html>

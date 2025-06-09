@@ -1,0 +1,211 @@
+body {
+  font-family: 'Inter', sans-serif;
+   background-color: #f5f5f5;
+   display: flex;
+   justify-content: center;
+   padding: 20px;
+   font-size: 13px;
+  color: #1a1a1a;
+ }
+ .container {
+   background: white;
+   border-radius: 10px;
+   padding: 20px;
+   width: 360px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+ }
+ /* heading style */
+ h2.bogo-heading {
+   text-align: center;
+   color: #f36;
+   margin-bottom: 20px;
+   position: relative;
+   font-size: 20px;
+ }
+ h2.bogo-heading::before,
+ h2.bogo-heading::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   width: 30%;
+   height: 1px;
+   background: #C8C8C8;
+ }
+ h2.bogo-heading::before {
+   left: -10;
+ }
+ h2.bogo-heading::after {
+   right: -10;
+ }
+ /* card stylings */
+ .card {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   border: 2px solid #ddd;
+   padding: 15px;
+   margin-bottom: 15px;
+   border-radius: 0px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: #fff;
+   position: relative;
+ }
+ .card.selected {
+   border-color: #f36;
+   background-color: #fff0f5;
+   box-shadow: 0 0 10px rgba(243, 102, 102, 0.2);
+ }
+ .card-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
+ .card-radio {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+ }
+ .card-radio input[type="radio"] {
+   accent-color: #f36;
+   width: 18px;
+   height: 18px;
+   cursor: pointer;
+ }
+ /* size and colour row style */
+ .selection-grid {
+  margin-top: 0px;
+}
+.labels {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  font-size: 14px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  padding-left: 48px;
+}
+/* badge styling eg:20% offer  */
+ .badge {
+   background: #FF6B82;
+   color: white;
+   padding: 2px 6px;
+   font-size: 12px;
+   border-radius: 4px;
+ }
+ .standard-price{
+  color: rgba(0, 0, 0, 1);
+ }
+ /* most popular ribbon styling */
+ .most-popular {
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: #FF6B82;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 0 0 5px 5px;
+  z-index: 1;
+}
+.most-popular::before {
+  content: '';
+  position: relative;
+  top: -16px;
+  left: -19px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #c44a5d;
+  transform: rotate(180deg); 
+}
+.most-popular::after {
+  content: '';
+  position: relative;
+  top: -16px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #c44a5d;
+  transform: rotate(180deg); 
+}
+/* Card detail styling */
+ .details p {
+   margin: 10px;
+   font-size: 16px;
+ }
+ .price span {
+   font-weight: bold;
+ }
+ .price del {
+   font-size: 12px;
+   color: gray;
+   display: block;
+ }
+ .options {
+   display: none;
+ }
+ .card.selected .options {
+   display: block;
+ }
+ .option {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   margin-top: 5px;
+ }
+ .option label {
+   width: 20px;
+   margin-left: 25px;
+ }
+ select {
+   padding: 4px;
+   border-radius: 4px;
+   border: 1px solid #ccc;
+ }
+ .price-summary {
+   width: 90%;
+   padding: 1rem;
+   font-family: Arial, sans-serif;
+ }
+ .row {
+   display: flex;
+   justify-content: space-between;
+   padding: 0.5rem 0;
+ }
+ .row.total {
+   font-weight: bold;
+   border-top: 2px solid #ccc;
+   margin-top: 1rem;
+   padding-top: 1rem;
+ }
+ .label {
+   color: #FF6B82;
+   font-weight: bold;
+   font-size: 12px;
+ }
+ .total {
+  font-weight: bold;
+   font-size: 12px;
+ }
+ .add-to-cart {
+   width: 100%;
+   background: #FF6B82;
+   color: white;
+   border: none;
+   padding: 12px;
+   font-size: 12px;
+   border-radius: 4px;
+   cursor: pointer;
+ }
+ .powered {
+   font-size: 10px;
+   font-style: italic;
+   color:rgba(0, 0, 0, 0.4);
+   text-align: right;
+   margin-top: 10px;
+   word-spacing: 2px;
+ }
